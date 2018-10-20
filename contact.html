@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
   <head>
 
@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Centro Odontológico - Hernandez</title>
+    <title>Consultorio Odontológico - Hernandez</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,28 +38,7 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contacto</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Odontología
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="portfolio-1-col.html">Implantes</a>
-                <a class="dropdown-item" href="portfolio-2-col.html">Caries</a>
-                <a class="dropdown-item" href="portfolio-3-col.html">Muelas</a>
-                <a class="dropdown-item" href="portfolio-4-col.html">Ortodoncia</a>
-                <a class="dropdown-item" href="portfolio-item.html">Clinica dental</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Más Servicios
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-                <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-                <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-              </div>
-            </li>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Más Información
@@ -77,15 +56,15 @@
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Centro Odontológico - Hernandez
-        <small>Calle</small>
+      <h1 class="mt-4 mb-3">Consultorio Odontológico - Hernandez
+        
       </h1>
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="index.html">Home</a>
         </li>
-        <li class="breadcrumb-item active">Contact</li>
+        <li class="breadcrumb-item active">Contacto</li>
       </ol>
 
       <!-- Content Row -->
@@ -123,30 +102,31 @@
       <div class="row">
         <div class="col-lg-8 mb-4">
           <h3>Envíenos un Mensaje</h3>
-          <form name="sentMessage" id="contactForm" novalidate>
+		  <form name="contactform" method="post" id="contactForm"   action="send_form_email.php">
+
             <div class="control-group form-group">
               <div class="controls">
                 <label>Nombre Completo:</label>
-                <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                <input type="text" class="form-control" id="name" name="nombre_completo" required data-validation-required-message="Por Favor Ingrese su Nombre Completo.">
                 <p class="help-block"></p>
               </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
                 <label>Teléfono:</label>
-                <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                <input type="tel" class="form-control" id="phone" name="telefono" required data-validation-required-message="Por Favor Ingrese su Telefono.">
               </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
                 <label>Dirección de E-mail:</label>
-                <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Por Favor Ingrese su  Email.">
               </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
                 <label>Mensaje:</label>
-                <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                <textarea rows="10" cols="100" class="form-control" id="message" name="mensaje" required data-validation-required-message="Por Favor Ingrese su Mensaje" maxlength="999" style="resize:none"></textarea>
               </div>
             </div>
             <div id="success"></div>
@@ -176,7 +156,7 @@
     <!-- Contact form JavaScript -->
     <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!--script src="js/contact_me.js"></script-->
 
   </body>
 
